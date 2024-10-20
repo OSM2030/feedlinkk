@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedLink Blogs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards; /* Duration: 2 seconds */
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+
+<body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Logo" class="logo"></a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Donate</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Event</a></li>
+            <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+        </ul>
+    </header>
+
+    <!-- Blog Section -->
+    <section id="blog-section" class="blog-section container text-center mt-5 fade-in">
+        <h3 class="mb-4">Our Latest Blogs</h3>
+
+        <!-- Blog 1 -->
+        <div class="row mb-4 align-items-center">
+            <div class="col-md-8 text-left">
+                <a class="nav-link" href="#"><h5 class="blog-title">How Food Donations Impact Communities</h5></a>
+                <p class="blog-content">Learn how food donations can transform lives and reduce food waste.</p>
+                <!-- <a href="blog1.html" class="btn btn-primary">Read More</a> -->
+            </div>
+            <div class="col-md-4">
+                <img class="img-fluid" src="img/blog1.jpg" alt="Blog 1 Image" style="max-width: 100%;">
+            </div>
+        </div>
+
+        <!-- Blog 2 -->
+        <div class="row mb-4 align-items-center">
+            <div class="col-md-8 text-left">
+                <a class="nav-link" href="#"><h5 class="blog-title">Volunteering: A Better Tomorrow</h5></a>
+                <p class="blog-content">Explore how volunteering enriches both lives and communities.</p>
+                <!-- <a href="blog1.html" class="btn btn-primary">Read More</a> -->
+            </div>
+            <div class="col-md-4">
+                <img class="img-fluid" src="img/blog2.jpg" alt="Blog 2 Image" style="max-width: 100%;">
+            </div>
+        </div>
+
+        <!-- Blog 3 -->
+        <div class="row mb-4 align-items-center">
+            <div class="col-md-8 text-left">
+                <a class="nav-link" href="#"><h5 class="blog-title">sustainable Food Practices</h5></a>
+                <p class="blog-content">Discover sustainable practices to reduce food waste and help the planet.</p>
+                <!-- <a href="blog1.html" class="btn btn-primary">Read More</a> -->
+            </div>
+            <div class="col-md-4">
+                <img class="img-fluid" src="img/blog3.jpg" alt="Blog 3 Image" style="max-width: 100%;">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Wait for the page to fully load, then trigger the fade-in animation
+        document.addEventListener("DOMContentLoaded", function() {
+            const blogSection = document.getElementById("blog-section");
+            blogSection.classList.add("fade-in");
+        });
+    </script>
+
+</body>
+</html>
