@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FeedLink Blogs</title>
@@ -18,7 +19,51 @@
                 opacity: 1;
             }
         }
+
+        /* Ensure images are responsive and maintain aspect ratio */
+        .blog-image {
+            width: 100%;
+            max-width: 250px; /* Reduced width for smaller images */
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Hover effect on images */
+        .blog-image:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
+        /* Blog cards for better layout */
+        .blog-card {
+            transition: box-shadow 0.3s ease;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .blog-card:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-content {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .blog-title {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .blog-title:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
     </style>
+</head>
 
 <body>
     <header class="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,7 +71,7 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="Donate.html">Donate</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Donate</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Event</a></li>
             <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
@@ -39,38 +84,41 @@
         <h3 class="mb-4">Our Latest Blogs</h3>
 
         <!-- Blog 1 -->
-        <div class="row mb-4 align-items-center">
+        <div class="row mb-4 blog-card align-items-center">
             <div class="col-md-8 text-left">
-                <a class="nav-link" href="#"><h5 class="blog-title">How Food Donations Impact Communities</h5></a>
-                <p class="blog-content">Learn how food donations can transform lives and reduce food waste.</p>
-                <!-- <a href="blog1.html" class="btn btn-primary">Read More</a> -->
+                <a class="nav-link" href="https://www.feedingindia.org/blog/">
+                    <h5 class="blog-title">Feeding India</h5>
+                </a>
+                <p class="blog-content">Serving daily meals for a hunger-free India.</p>
             </div>
-            <div class="col-md-4">
-                <img class="img-fluid" src="img/blog1.jpg" alt="Blog 1 Image" style="max-width: 100%;">
+            <div class="col-md-4 text-center">
+                <img class="img-fluid blog-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuP0hq62APhBHQvN0qiB4ay9p-5RZD85HmcA&s" alt="Blog 1 Image">
             </div>
         </div>
 
         <!-- Blog 2 -->
-        <div class="row mb-4 align-items-center">
+        <div class="row mb-4 blog-card align-items-center">
             <div class="col-md-8 text-left">
-                <a class="nav-link" href="#"><h5 class="blog-title">Volunteering: A Better Tomorrow</h5></a>
-                <p class="blog-content">Explore how volunteering enriches both lives and communities.</p>
-                <!-- <a href="blog1.html" class="btn btn-primary">Read More</a> -->
+                <a class="nav-link" href="https://www.misrii.com/blog/benefits-of-food-donation/">
+                    <h5 class="blog-title">Benefits Of Food Donation</h5>
+                </a>
+                <p class="blog-content">Discover how food donation not only reduces waste but also nourishes those in need, creating a healthier community for everyone.</p>
             </div>
-            <div class="col-md-4">
-                <img class="img-fluid" src="img/blog2.jpg" alt="Blog 2 Image" style="max-width: 100%;">
+            <div class="col-md-4 text-center">
+                <img class="img-fluid blog-image" src="https://www.misrii.com/blog/wp-content/uploads/2019/05/donation.jpg" alt="Blog 2 Image">
             </div>
         </div>
 
         <!-- Blog 3 -->
-        <div class="row mb-4 align-items-center">
+        <div class="row mb-4 blog-card align-items-center">
             <div class="col-md-8 text-left">
-                <a class="nav-link" href="#"><h5 class="blog-title">sustainable Food Practices</h5></a>
-                <p class="blog-content">Discover sustainable practices to reduce food waste and help the planet.</p>
-                <!-- <a href="blog1.html" class="btn btn-primary">Read More</a> -->
+                <a class="nav-link" href="https://stopfoodwaste.org/blog">
+                    <h5 class="blog-title">Stop Food Waste</h5>
+                </a>
+                <p class="blog-content">Learn how reducing food waste can save resources, protect the environment, and feed those who are hungry.</p>
             </div>
-            <div class="col-md-4">
-                <img class="img-fluid" src="img/blog3.jpg" alt="Blog 3 Image" style="max-width: 100%;">
+            <div class="col-md-4 text-center">
+                <img class="img-fluid blog-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv2cbP-hqmzNP3IxRdUwaZ0i5ponSYdwxpbfXShOqztpM11UahAnj2La0P35ZeSXCULSc&usqp=CAU" alt="Blog 3 Image">
             </div>
         </div>
     </section>
@@ -84,4 +132,5 @@
     </script>
 
 </body>
+
 </html>
