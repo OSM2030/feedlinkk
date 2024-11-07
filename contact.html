@@ -8,97 +8,46 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-          /* Fade-in animation */
-          .fade-in {
-            opacity: 0;
-            animation: fadeIn 2s forwards; /* Duration: 2 seconds */
+        /* Additional styling to enhance the contact page */
+        .contact-header {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #0056b3;
         }
 
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-        /* Add padding around sections */
-        .container {
-            padding: 30px 15px;
-        }
-
-        /* Interactive "Our Goal" section */
-        .goal {
+        .contact-info {
             background-color: #f8f9fa;
             padding: 20px;
             border-radius: 10px;
-            transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
         }
 
-        .goal:hover {
-            transform: scale(1.05);
-            background-color: #e9ecef;
+        .social-links img {
+            width: 30px;
+            margin-right: 10px;
+            vertical-align: middle;
+            transition: transform 0.2s;
         }
 
-        .goal p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            color: #343a40;
+        .social-links img:hover {
+            transform: scale(1.1);
         }
 
-        .goal-icon {
-            font-size: 2em;
-            margin-bottom: 10px;
-            color: #007bff;
-        }
-
-        /* Centered form styling */
         .contact-form {
-            max-width: 600px; /* Set a max width for the form */
-            margin: auto; /* Center the form */
-            background-color: #f9f9f9; /* Light background */
-            padding: 30px; /* Add padding */
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        form input,
-        form textarea {
+        .contact-form input,
+        .contact-form textarea {
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            font-size: 1.1em;
-        }
-
-        form button {
-            width: 48%; /* Set width for buttons */
-        }
-
-        form button:hover {
-            transform: scale(1.05);
-        }
-
-        /* Footer icons */
-        .footer-info img.logo-icon {
-            width: 24px;
-            margin-right: 8px;
-            vertical-align: middle;
-        }
-
-        .footer-info h5 {
-            font-size: 1.3em;
-            margin-bottom: 15px;
-        }
-
-        .footer-info p {
-            font-size: 1.1em;
-            line-height: 1.5;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #f8f9fa;
-            font-size: 0.9em;
-            color: #555;
-            border-top: 1px solid #ddd;
         }
     </style>
 </head>
@@ -111,66 +60,58 @@
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
-            <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
             <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
             <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
         </ul>
     </header>
 
     <!-- Contact Us Section -->
-    <section class="container mt-5">
-        <h2 class="text-center">Contact Us</h2>
-        <div class="contact-form">
+    <section class="container">
+        <h2 class="contact-header">Get in Touch with FeedLink</h2>
+
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-md-6 contact-info">
+                <h4>Contact Information</h4>
+                <p><strong>Address:</strong> Chh. Shambhajinagar, Maharashtra - 431001, India</p>
+                <p><strong>Email:</strong> info@feedlink.org</p>
+                <p><strong>Phone:</strong> +91-967145**** | +91-99585****</p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="col-md-6 contact-info">
+                <h4>Follow Us on Social Media</h4>
+                <div class="social-links">
+                    <p><img src="img/insta.png" alt="Instagram Icon"> <a href="#">Instagram</a></p>
+                    <p><img src="img/linkdin.png" alt="LinkedIn Icon"> <a href="#">LinkedIn</a></p>
+                    <p><img src="img/x.png" alt="Twitter Icon"> <a href="#">Twitter</a></p>
+                    <p><img src="img/fb.png" alt="Facebook Icon"> <a href="#">Facebook</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form mt-5">
+            <h4 class="text-center">Send Us a Message</h4>
             <form id="contactForm">
-                <input type="text" id="name" placeholder="Your Name" class="form-control mb-2" required>
-                <input type="email" id="email" placeholder="Your Email" class="form-control mb-2" required>
-                <input type="text" id="PhoneNo." placeholder="Contact No." class="form-control mb-2" required>
-                <textarea id="message" placeholder="Your Message" class="form-control mb-2" rows="4" required></textarea>
-                <div class="d-flex justify-content-between">
-                    <button type="submit" class="btn btn-primary mt-2">Send</button>
-                    <button type="reset" class="btn btn-secondary mt-2">Re-fill</button>
+                <input type="text" id="name" placeholder="Your Name" class="form-control mb-3" required>
+                <input type="email" id="email" placeholder="Your Email" class="form-control mb-3" required>
+                <input type="tel" id="phone" placeholder="Your Phone Number" class="form-control mb-3" required>
+                <textarea id="message" placeholder="Your Message" class="form-control mb-3" rows="5" required></textarea>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Send Message</button>
                 </div>
             </form>
         </div>
     </section>
 
-    <!-- Interactive Our Goal Section -->
-    <section class="container">
-        <div class="goal text-center">
-            <div class="goal-icon">🌍</div>
-            <h5>Our Goal</h5>
-            <p>Our mission is to ensure that no food goes to waste. We aim to connect those with excess food to those in need, creating a community where everyone can have a meal.</p>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <section class="footer-info container mt-5">
-        <div class="row">
-            <div class="col-md-4">
-                <h5>Connect With Us</h5>
-                <p><img src="img/insta.png" alt="Instagram" class="logo-icon"> Instagram</p>
-                <p><img src="img/linkdin.png" alt="LinkedIn" class="logo-icon"> LinkedIn</p>
-                <p><img src="img/x.png" alt="Twitter" class="logo-icon"> Twitter</p>
-                <p><img src="img/fb.png" alt="Facebook" class="logo-icon"> Facebook</p>
-            </div>
-
-            <div class="col-md-4">
-                <h5>Contact Us</h5>
-                <p><img src="img/add.png" alt="Address" class="logo-icon"> Chh. Shambhajinagar, Maharashtra - 431001, India</p>
-                <p><img src="img/mail.png" alt="Email" class="logo-icon"> info@feedlink.org</p>
-                <p><img src="img/call.png" alt="Phone" class="logo-icon"> +91-967145****</p>
-                <p><img src="img/call.png" alt="Phone" class="logo-icon"> +91-99585****</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
+    <footer class="text-center mt-4">
         <p>&copy; 2024 FeedLink. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>
