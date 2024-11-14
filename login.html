@@ -1,109 +1,129 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - FeedLink</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
     <style>
-        /* Styling for login form */
         body {
-            background: url('https://t3.ftcdn.net/jpg/03/55/84/80/360_F_355848016_WbdWDytPgTZwit3Dz9ucrtZLSat3m0R9.jpg') no-repeat center center fixed; /* Add your image here */
-            background-size: cover; /* Cover the entire page */
-            font-family: Arial, sans-serif;
-            color: #ffffff; /* Change text color for better contrast */
-            height: 100vh; /* Ensure the body takes up the full viewport height */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #c3d9f0, #8ebbdb, #a6c1de);
+           
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            position: relative;
+            overflow: hidden;
+            width: 450px;
+            max-width: 100%;
+            border-radius: 8px;
+            box-sizing: border-box;
+            animation: fadeIn 1s ease-in-out;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .login-container:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: -1;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-top: 40px;
         }
 
         .login-form {
-            max-width: 500px;
-            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
             padding: 30px;
-            background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
         }
 
-        .login-form h3 {
+        .form-group {
             margin-bottom: 20px;
-            color: #343a40; /* Change color for better readability */
         }
 
-        .login-form input {
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
         }
 
-        .login-form button {
+        .form-group input {
             width: 100%;
-            margin-top: 15px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
 
-        .login-links {
-            margin-top: 10px;
-            font-size: 0.9em;
-            text-align: center;
-            color: #6c757d;
+        input[type="submit"] {
+            background-color: #187bff;
+            color: #fff;
+            border: none;
+            padding: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
 
-        .login-links a {
-            color: #007bff;
+        input[type="submit"]:hover {
+            background-color: #145b9c;
         }
 
-        .login-links a:hover {
+        .form-group a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .form-group a:hover {
             text-decoration: underline;
         }
 
-        footer {
-            margin-top: 40px;
-            padding: 20px 0;
-            background-color: #f8f9fa;
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Logo" class="logo"></a>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
-            <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
-            <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
-        </ul>
-    </header>
-
-    <!-- Login Form -->
-    <section class="login-form">
-        <h3 class="text-center">Login to FeedLink</h3>
-        <form id="loginForm">
+    <div class="login-container">
+        <h2>Login</h2>
+        <form class="login-form" method="post" action="/login">
             <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="Enter your email" class="form-control" required>
+                <label for="name">Username:</label>
+                <input type="text" id="name" name="name" required autocomplete="off" />
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password" class="form-control" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required autocomplete="off" />
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-            <div class="login-links">
-                <p><a href="#">Forgot Password?</a></p>
-                <p>Don't have an account? <a href="register.html">Register Here</a></p>
+            <div class="form-group">
+                <input type="submit" id="submit"/>
+            </div>
+            <div class="form-group">
+                <p align="center">Don't have an account? <a href="/signup">Register</a></p>
             </div>
         </form>
-    </section>
-
-    <footer class="text-center mt-4">
-        <p>&copy; 2024 FeedLink. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    </div>
 </body>
 
 </html>
